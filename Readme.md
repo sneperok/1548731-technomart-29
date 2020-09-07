@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Кирилл Вевер](https://up.htmlacademy.ru/htmlcss/29/user/1548731).
-* Наставник: `Неизвестно`.
+* Наставник: `Илья Приходкин, https://up.htmlacademy.ru/htmlcss/29/tutors`.
 
 ---
 
