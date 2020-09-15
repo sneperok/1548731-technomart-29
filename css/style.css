@@ -1,0 +1,273 @@
+:root {
+	/* Стандартные цвета */
+	--basic-darkblue: #293449;
+	--basic-lightblue: #32425C;
+	--basic-white: #ffffff;
+	--basic-black: #000000;
+	--basic-red: #EE3643;
+	--basic-green: #63A63E;
+	--header-basic: #f3f7f9;
+	/* main promo */
+	--materials: #ffbf47;
+	--tools: #3bbce3;
+	--technics: #dc91d8;
+	--discount: #8ed78f;
+	--delivery: #ffc047;
+	/* --header-basic: rgba(0,0,0,0.0001); */
+	/* Цвета состояния header */
+	--active-red: #ba2732;
+	--header-hover-green: #5FBB2D;
+	--header-active-darkblue: #161D29;
+	--header-hover-blue: #3d546f;
+	--active-greylight: #c5c5c5;
+	--white-opacity: rgba(255,255,255,0.5);
+	/* цвета состояния Main */
+	--main-hover-red: #ca2c37;
+	
+}
+
+.body {
+	min-width: 940px;
+	margin: 0;
+	padding: 0;
+	color: var(--basic-white);
+  	background-color: var(--basic-black);
+	/* font-family: "Cuprum", "Arial", sans-serif; */
+	/* font-family: "PT Sans", "Arial", sans-serif; */
+}
+
+.header {
+	min-width: 940px;
+	background-color: var(--header-basic);
+	font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.header a {
+	text-decoration: none;
+	color: var(--basic-white);
+}
+
+.button {
+	font: inherit;
+  	text-align: center;
+  	vertical-align: middle;
+  	border: none;
+	text-decoration: none;
+}
+
+.main-button {
+	background-color: var(--basic-red);
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: var(--basic-white);
+}
+
+/* =============================== HEADER MENU ============================= */
+
+
+.header-logo {
+	background-color: var(--basic-red);
+	box-shadow: inset 0px -5px 0px rgba(0,0,0,0.24);
+}
+
+.header-menu {
+	min-width: 940px;
+	background-color: var(--basic-darkblue);
+}
+
+.header-output {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.header-button {
+	background-color: var(--basic-green);
+	color: var(--basic-white);
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.header-search {
+	background-color: inherit;
+	border: none;
+	color: var(--basic-white);
+	font-size: 18px;
+	line-height: 24px;
+}
+
+/* =================================== HEADER INFO =========================== */
+
+.header-general-info {
+	font-style: italic;
+	font-size: 16px;
+	line-height: 23px;
+	color: var(--basic-red);
+}
+
+.header-contacts .header-phone {
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 30px;
+	color: var(--basic-red);
+	border: 3px solid #ffffff;
+	box-sizing: border-box;
+}
+
+.header-adress {
+	color: var(--basic-lightblue);
+}
+
+.header-info .enter-link,
+.header-info .registration-link {
+	color: var(--basic-black);
+	background-color: var(--basic-white);
+}
+
+/* =========================== HEADER NAVIGATION ============================= */
+
+.header-navigation {
+	width: 940px;
+	background-color: var(--basic-lightblue);
+	box-shadow: inset 0px -5px 0px var(--basic-darkblue);
+}
+
+.site-navigation {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+/* ============================ HEADER HOVER/LINK/FOCUS =================== */
+
+.header-button:hover {
+	background-color: var(--header-hover-green);
+}
+
+.header-button:active {
+	color: var(--white-opacity);
+}
+
+.output-button:active {
+	color: var(--white-opacity);
+	background-color: var(--header-active-darkblue);
+}
+
+.header-search:focus,
+.header-search:active {
+	background-color: var(--basic-white);
+	color: var(--basic-black);
+	border: none;
+	outline: none;
+}
+
+.header-logo:active {
+	background-color: var(--active-red);
+}
+
+.enter-link:hover,
+.registration-link:hover {
+	color: var(--basic-red);
+}
+
+.enter-link:active,
+.enter-link:focus,
+.registration-link:active,
+.registration-link:focus {
+	color: var(--active-greylight)
+}
+
+.site-navigation a:hover {
+	background-color: var(--basic-darkblue);
+}
+
+.site-navigation a:active,
+.site-navigation a:focus {
+	background-color: var(--header-active-darkblue);
+	color: var(--white-opacity);
+}
+
+/* ============================== MAIN PROMO ======================== */
+
+.main-promo {
+	background-color: rgba(0,0,0,0.25);
+}
+
+
+.materials {
+	background-color: var(--materials);
+}
+
+.tools {
+	background-color: var(--tools);
+}
+
+.technics {
+	background-color: var(--technics);
+}
+
+.discount {
+	background-color: var(--discount);
+}
+
+.delivery {
+	background-color: var(--delivery);
+}
+
+.promo-container {
+	font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.promo-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.promo-item {
+	width: 300px;
+	height: 123px;
+}
+
+.promo-item h3 {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: var(--basic-white);
+}
+
+.promo-item .button {
+	text-transform: uppercase;
+	color: var(--basic-white);
+	background-color: rgba(255,255,255,0.3);
+	font-size: 14px;
+	line-height: 18px;
+}
+
+/* ====================== MAIN PROMO HOVER/LINK/FOCUS ================ */
+
+.promo-button:hover {
+	background-color: rgba(197,197,197,0.3);
+}
+
+.promo-button:active,
+.promo-button:focus {
+	background-color: rgba(169,169,169,0.3);
+}
+
+.main-button:hover {
+	background-color: var(--main-hover-red);
+}
+
+.main-button:active,
+.main-button:focus {
+	background-color: var(--active-red);
+}
+
+/* =========================== MAIN CATALOG ========================= */
+
