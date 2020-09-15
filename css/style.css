@@ -199,6 +199,12 @@
 	background-color: rgba(0,0,0,0.25);
 }
 
+.promo-slider h2 {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
 .materials {
 	background-color: var(--materials);
 }
@@ -274,6 +280,12 @@
 .popular-item {
 	background-color: #f9f5f0;
 	font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.popular-item h2 {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
 }
 
 .product-list {
@@ -395,6 +407,12 @@
 	font-family: "Cuprum", "Arial", sans-serif;
 }
 
+.popular-manufacturer h2 {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
 .manufacturer-list {
 	padding: 0;
 	width: 940px;	/* ================ Сделал временный флекс для удобства отображения */
@@ -424,12 +442,14 @@
 .service-container h2 {
 	font-size: 30px;
 	line-height: 30px;
+	text-transform: uppercase;
 	color: var(--basic-black);
 }
 
 .delivery-container h2 {
 	font-size: 30px;
 	line-height: 30px;
+	text-transform: uppercase;
 	color: var(--basic-lightblue);
 }
 
