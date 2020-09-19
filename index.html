@@ -17,24 +17,26 @@
 				</a> 
 				<form>
 					<label>
-						<input class="header-search" type="search" name="search" value="Поиск:">					
+						<svg class="search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
+						</svg>
+						<input class="header-search" type="search" name="search" value="Поиск:">
+						
 					</label>
 				</form>
 				<ul class="header-output">
 					<li class="output-item">
 						<a class="button output-button header-bookmark" href="">
-							<img class="output-icon" src="img/icon-bookmark.svg">
 							Закладки: 0
 						</a>
 					</li>
 					<li class="output-item">
 						<a class="button output-button header-cart" href="">
-							<img class="output-icon" src="img/icon-cart.svg">
 							Корзина: 0
 						</a>
 					</li>
 				</ul>
-				<a class="button header-button" href="">Оформить заказ</a>
+				<a class="button confirm-button" href="">Оформить заказ</a>
 			</div>
 				
 				<!-- Средний блок Header'a -->
@@ -47,7 +49,6 @@
 				</h1>
 				<div class="header-contacts">
 					<a  class="header-phone" href="tel:+78125550555">
-						<img src="">
 						+7 (812) 555-05-55
 					</a>
 					<p class="header-adress">
@@ -97,11 +98,22 @@
 			<div class="promo-column">
 				<section class="promo-container">
 					<div class="promo-slider">
-						<h2>Пефрораторы</h2> 
-							<p>
-								Настоящие мужские игрушки
-							</p>
-							<a class="catalog-button main-button button" href="catalog.html">Открыть каталог</a>
+						<div class="perfotaros-page">
+							<img src="img/Perforators.jpg" width="620" height="266" alt="Строитель с перфоратором">
+							<h2>Пефрораторы</h2> 
+								<p>
+									Настоящие мужские игрушки
+								</p>
+								<a class="catalog-button main-button button" href="catalog.html">Открыть каталог</a>
+						</div>
+						<div class="drill-page">
+							<img src="img/Drill.jpg" width="620" height="266" alt="Строитель с дрелью">
+							<h2>Дрели</h2> 
+								<p>
+									Соседям на радость!
+								</p>
+								<a class="catalog-button main-button button" href="catalog.html">Открыть каталог</a>
+						</div>
 					</div>
 					<ul class="promo-list">
 						<li class="promo-item materials">
@@ -116,7 +128,7 @@
 							<h3>Техника</h3>
 							<a class="button promo-button" href="">Для стройки</a>
 						</li>
-						<li class="promo-item discount">
+						<li class="promo-item sales">
 							<h3>Скидка 50%</h3>
 							<a class="button promo-button" href="">На 350 товаров</a>
 						</li>
@@ -139,7 +151,7 @@
 							<a class="buy button" href="">Купить</a>
 							<a class="bookmark button" href="">В Закладки</a>
 						</div>
-						<img src="https://via.placeholder.com/184x164" alt="">
+						<img src="img/Bosch%20BFG%209000.png" width="184" height="164" alt="Фото модели BFG9000">
 						<h3>Перфоратор BOSCH BFG 9000</h3>
 						<span>32500 Р.</span>
 						<p><a class="button red-button" href="">25500 Р.</a></p>
@@ -149,7 +161,7 @@
 							<a class="buy button" href="">Купить</a>
 							<a class="bookmark button" href="">В Закладки</a>
 						</div>
-						<img src="https://via.placeholder.com/184x164" alt="">
+						<img src="img/Bosch%20BFG%203000.png" width="127" height="112" alt="Фото модели BFG3000">
 						<h3>Перфоратор BOSCH BFG 3000</h3>
 						<span>22500 Р.</span>
 						<p><a class="button red-button" href="">15500 Р.</a></p>
@@ -159,7 +171,7 @@
 							<a class="buy button" href="">Купить</a>
 							<a class="bookmark button" href="">В Закладки</a>
 						</div>
-						<img src="https://via.placeholder.com/184x164" alt="">
+						<img src="img/Bosch%20BFG%206000.png" width="144" height="128" alt="Фото модели BFG6000">
 						<h3>Перфоратор BOSCH BFG 6000</h3>
 						<span>30500 Р.</span>
 						<p><a class="button red-button" href="">25500 Р.</a></p>
@@ -169,7 +181,7 @@
 							<a class="buy button" href="">Купить</a>
 							<a class="bookmark button" href="">В Закладки</a>
 						</div>
-						<img src="https://via.placeholder.com/184x164" alt="">
+						<img src="img/Bosch%20BFG%202000.png" width="127" height="112" alt="Фото модели BFG2000">
 						<h3>Перфоратор BOSCH BFG 2000</h3>
 						<span class="span">1</span>
 						<p><a class="button red-button" href="">12500 Р.</a></p>
@@ -184,28 +196,28 @@
 				</div>
 				<ul class="manufacturer-list">
 					<li class="manufacturer-item">
-						<a href=""><img src="https://via.placeholder.com/220x145" alt="BOSCH"></a>
+						<a href=""><img src="img/Bosch.png" width="126" height="37" alt="BOSCH"></a>
 					</li>
 					<li class="manufacturer-item">
-						<a href=""><img src="https://via.placeholder.com/220x145" alt="Makita"></a>
+						<a href=""><img src="img/Makita.png" width="123" height="40" alt="Makita"></a>
 					</li>
 					<li class="manufacturer-item">
-						<a href=""><img src="https://via.placeholder.com/220x145" alt="DeWALT"></a>
+						<a href=""><img src="img/DeWalt.png" width="146" height="44" alt="DeWALT"></a>
 					</li>
 					<li class="manufacturer-item">
-						<a href=""><img src="https://via.placeholder.com/220x145" alt="Интерскол"></a>
+						<a href=""><img src="img/Interskol.png" width="200" height="76" alt="Интерскол"></a>
 					</li>
 					<li class="manufacturer-item">
-						<a href=""><img src="https://via.placeholder.com/220x145" alt="HITACHI"></a>
+						<a href=""><img src="img/Hitachi.png" width="169" height="31" alt="HITACHI"></a>
 					</li>
 					<li class="manufacturer-item">
-						<a href=""><img src="https://via.placeholder.com/220x145" alt="LG"></a>
+						<a href=""><img src="img/LG.png" width="121" height="73" alt="LG"></a>
 					</li>
 					<li class="manufacturer-item">
-						<a href=""><img src="https://via.placeholder.com/220x145" alt="AEG"></a>
+						<a href=""><img src="img/AEG.png" width="151" height="98" alt="AEG"></a>
 					</li>
 					<li class="manufacturer-item">
-						<a href=""><img src="https://via.placeholder.com/220x145" alt="metabo"></a>
+						<a href=""><img src="img/metabo.png" width="206" height="73" alt="metabo"></a>
 					</li>
 				</ul>
 			</section>
@@ -281,7 +293,9 @@
 				<div class="footer-top">
 					<section class="footer-adress">
 						<h2>Как нас найти</h2>
-						<a class="footer-logo" href="#">Техномарт</a> 				
+						<a class="footer-logo" href="#">
+							<img src="img/logo-footer.svg">
+						</a> 				
 						<p>
 							г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 							<a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -333,13 +347,28 @@
 						<h2>Связаться с нами</h2>
 							<ul class="social-icon-list">
 								<li class="social-icon-item">
-									<a href="#">Вконтакте</a>
+									<a href="#">
+										<svg width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="vk-icon-shape" fill-rule="evenodd" clip-rule="evenodd" d="M22.16 1.48c11.5 0 20.8 9.1 20.8 20.34 0 11.23-9.3 20.33-20.8 20.33-11.49 0-20.8-9.1-20.8-20.33 0-11.23 9.31-20.34 20.8-20.34z"/>
+											<path d="M24.54 25.73c.92-.3 2.1 1.91 3.35 2.75.95.64 1.67.5 1.67.5l3.34-.04s1.75-.1.92-1.46c-.07-.11-.48-1-2.49-2.83-2.1-1.92-1.8-1.6.72-4.92 1.53-2.02 2.15-3.25 1.96-3.78-.19-.5-1.32-.37-1.32-.37l-3.77.03c-.36 0-.67.1-.82.48 0 0-.6 1.56-1.39 2.89-1.67 2.8-2.34 2.95-2.62 2.77-.64-.4-.48-1.63-.48-2.5 0-2.71.42-3.84-.81-4.14-.41-.1-.71-.16-1.76-.17-1.34-.02-2.48 0-3.12.31-.43.21-.76.67-.56.7.25.03.8.14 1.11.54.39.52.37 1.68.37 1.68s.22 3.2-.52 3.6c-.5.27-1.2-.29-2.7-2.83a23.51 23.51 0 01-1.34-2.74s-.1-.27-.3-.41c-.25-.18-.59-.23-.59-.23l-3.57.02s-.54.01-.74.24c-.17.2-.01.63-.01.63s2.8 6.45 5.97 9.7c2.9 2.98 6.21 2.79 6.21 2.79h1.5s.45-.05.68-.3c.22-.22.21-.64.21-.64s-.03-1.98.9-2.27z" fill="#fff"/>
+										</svg>
+									</a>
 								</li>
 								<li class="social-icon-item">
-									<a href="#">Фейсбук</a>
+									<a href="#">
+										<svg width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="fb-icon-shape" fill-rule="evenodd" clip-rule="evenodd" d="M21.9 1.5a20.3 20.3 0 110 40.6 20.3 20.3 0 010-40.6z"/>
+											<path d="M28 15v-4h-4a4 4 0 00-4 4v4h-4v4h4v10h4V23h4v-4h-4v-4h4z" fill="#fff"/>
+										</svg>
+									</a>
 								</li>
 								<li class="social-icon-item">
-									<a href="#">Инстаграм</a>
+									<a href="#">
+										<svg width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="inst-icon-shape" fill-rule="evenodd" clip-rule="evenodd" d="M21.9 1.5a20.3 20.3 0 110 40.6 20.3 20.3 0 010-40.6z"/>
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M14 11h15a3 3 0 013 3v15a3 3 0 01-3 3H14a3 3 0 01-3-3V14a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM14 29v-9h1.2a6.5 6.5 0 1012.6 0H29v9H14zm11-11h4v-4h-4v4z" fill="#fff"/>
+										</svg>
+									</a>
 								</li>
 							</ul>
 					</section>

@@ -11,7 +11,7 @@
 	--materials: #ffbf47;
 	--tools: #3bbce3;
 	--technics: #dc91d8;
-	--discount: #8ed78f;
+	--sales: #8ed78f;
 	--delivery: #ffc047;
 	/* --header-basic: rgba(0,0,0,0.0001); */
 	/* Цвета состояния header */
@@ -78,14 +78,12 @@
 }
 
 .header-output {
-	padding: 0;
-	margin: 0;
 	list-style: none;
 	font-size: 18px;
 	line-height: 24px;
 }
 
-.header-button {
+.confirm-button {
 	background-color: var(--basic-green);
 	color: var(--basic-white);
 	font-size: 18px;
@@ -100,7 +98,29 @@
 	line-height: 24px;
 }
 
-.output-button img {
+.search-icon {			/* Это будет кнопкой в форме */	
+	fill-opacity: 0.3;
+	fill: white;
+}
+
+
+.header-bookmark::before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 16px;
+	background-image: url("../img/icon-bookmark.svg");
+	background-repeat: no-repeat;
+	opacity: 0.3;
+}
+
+.header-cart::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;	
+	background-image: url("../img/icon-cart.svg");
+	background-repeat: no-repeat;
 	opacity: 0.3;
 }
 
@@ -120,6 +140,15 @@
 	color: var(--basic-red);
 	border: 3px solid #ffffff;
 	box-sizing: border-box;
+}
+
+.header-phone::before {
+	content: "";
+	display: inline-block;
+	width: 19px;
+	height: 20px;
+	background-image: url("../img/icon-phone.svg");
+	background-repeat: no-repeat;
 }
 
 .header-adress {
@@ -182,11 +211,11 @@
 
 /* ============================ HEADER HOVER/LINK/FOCUS =================== */
 
-.header-button:hover {
+.confirm-button:hover {
 	background-color: var(--header-hover-green);
 }
 
-.header-button:active {
+.confirm-button:active {
 	color: var(--white-opacity);
 }
 
@@ -195,12 +224,22 @@
 	background-color: var(--header-active-darkblue);
 }
 
-.output-button:hover img {
+.output-button:hover.header-cart::before,
+.output-button:hover.header-bookmark::before {
 	opacity: 1;
 }
 
-.output-button:focus img {
+.output-button:focus.header-cart::before,
+.output-button:focus.header-bookmark::before {
 	opacity: 0.3;
+}
+
+.search-icon:hover {			/* Это будет кнопкой в форме */					
+	fill-opacity: 1;
+}
+
+.search-icon:focus {
+	fill: var(--basic-red);		/* Это будет кнопкой в форме */	
 }
 
 .header-search:focus,
@@ -251,8 +290,10 @@
 
 /* ============================== MAIN PROMO ======================== */
 
-.promo-slider {
-	background-color: rgba(0,0,0,0.25);
+/* .promo-slider {background-color: rgba(0,0,0,0.25);} */
+
+.promo-slider { 		/* ================ Сделал временный флекс для удобства отображения */
+	display: flex;
 }
 
 .promo-slider h2 {
@@ -263,22 +304,37 @@
 
 .materials {
 	background-color: var(--materials);
+	background-image: url("../img/materials-icon.svg");
+	background-repeat: no-repeat;
+	background-position: 80%;
 }
 
 .tools {
 	background-color: var(--tools);
+	background-image: url("../img/tools-icon.svg");
+	background-repeat: no-repeat;
+	background-position: 80%;
 }
 
 .technics {
 	background-color: var(--technics);
+	background-image: url("../img/technics-icon.svg");
+	background-repeat: no-repeat;
+	background-position: 80%;
 }
 
-.discount {
-	background-color: var(--discount);
+.sales {
+	background-color: var(--sales);
+	background-image: url("../img/sales-icon.svg");
+	background-repeat: no-repeat;
+	background-position: 80%;
 }
 
 .delivery {
 	background-color: var(--delivery);
+	background-image: url("../img/delivery-icon.svg");
+	background-repeat: no-repeat;
+	background-position: 80%;
 }
 
 .promo-container {
@@ -347,7 +403,7 @@
 .product-list {
 	padding: 0;
 	width: 940px;
-	display: flex;	/* ================ Сделал временный флекс для удобства отображения */
+	display: flex;		/* ================ Сделал временный флекс для удобства отображения */
 	flex-wrap: wrap;
 	justify-content: space-between;
 	font-family: "Cuprum", "Arial", sans-serif;
@@ -355,8 +411,13 @@
 }
 
 .product-item {
-	width: 220px;	/* ================= Временная ширина для флекса выше */
-	position: relative; 
+	position: relative;
+	display: flex;		/* ================ Сделал временный флекс для удобства отображения */
+	flex-direction: column;
+	justify-content: center;
+  	align-items: center;
+	width: 220px;
+	height: 318px; 
 	font-family: "PT Sans", "Arial", sans-serif;
 	background-color: var(--basic-white);
 	border: 1px solid #eaeaea;
@@ -379,6 +440,9 @@
 }
 
 .hidden-item {
+	display: flex;		/* ================ Сделал временный флекс для удобства отображения */
+	flex-direction: column;
+	justify-content: flex-start;
 	position: absolute;
 	visibility: hidden;
 }
@@ -470,6 +534,16 @@
 	text-transform: uppercase;
 }
 
+.manufacturer-item {
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+	width: 220px;
+	height: 145px;
+	border: 1px solid #eaeaea;
+	box-sizing: border-box;
+}
+
 .manufacturer-list {
 	padding: 0;
 	width: 940px;	/* ================ Сделал временный флекс для удобства отображения */
@@ -480,13 +554,13 @@
 }
 
 .manufacturer-item:hover {
-	filter: drop-shadow(0px 4px 20px rgba(0,0,0,0.15));
+	box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
 }
 
 .manufacturer-item:active,
 .manufacturer-item:focus {
 	opacity: 0.5;
-	filter: drop-shadow(0px 4px 20px rgba(0,0,0,0.15));
+	box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
 }
 
 /* ========================== SERVICE-DELIVERY =========================== */
@@ -501,6 +575,20 @@
 	line-height: 30px;
 	text-transform: uppercase;
 	color: var(--basic-black);
+}
+
+.service-delivery-container::before {
+	position: absolute;
+	content: "";
+/*
+	width: 468px;  ========= Размеры картинки грузовика
+	height: 261px;
+*/
+	width: 1200px; /* Временные размеры блока для позиционирования грузовика */
+	height: 522px;
+	background-image: url("../img/Delivery-track.png");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
 }
 
 .delivery-container h2 {
@@ -523,7 +611,7 @@
 }
 
 .service-delivery-item {
-	padding: 50px;
+	padding: 10px;
 	background-color: var(--basic-lightblue);
 	box-shadow: inset 0px 1px 0px #405069;
 	filter: drop-shadow(0px 1px 0px var(--basic-darkblue));
@@ -593,8 +681,33 @@
 .footer-logo {
 	background-color: var(--basic-red);
 	box-shadow: inset 0px -5px 0px rgba(0,0,0,0.24);
-	color: var(--basic-white);
 }
+
+.vk-icon-shape,
+.fb-icon-shape,
+.inst-icon-shape {
+	fill: #212A3A;
+}
+
+.social-icon-item:hover .vk-icon-shape,
+.social-icon-item:active .vk-icon-shape,
+.social-icon-item:hover .fb-icon-shape,
+.social-icon-item:active .fb-icon-shape,
+.social-icon-item:hover .inst-icon-shape,
+.social-icon-item:active .inst-icon-shape {
+	fill: var(--basic-red);
+}
+
+/*
+.vk-icon-shape:hover,
+.vk-icon-shape:active,
+.fb-icon-shape:hover,
+.fb-icon-shape:active,
+.inst-icon-shape:hover,
+.inst-icon-shape:active {
+	fill: var(--basic-red);
+}
+*/
 
 .footer-adress h2,
 .footer-navigation h2 {
