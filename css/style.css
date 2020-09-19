@@ -43,7 +43,7 @@
 	font-family: "Cuprum", "Arial", sans-serif;
 }
 
-.header-container a{
+.header-container a {
 	text-decoration: none;
 	color: var(--basic-white);
 }
@@ -100,6 +100,10 @@
 	line-height: 24px;
 }
 
+.output-button img {
+	opacity: 0.3;
+}
+
 /* =================================== HEADER INFO =========================== */
 
 .header-general-info {
@@ -128,7 +132,7 @@
 	background-color: var(--basic-white);
 }
 
-.cart {
+.useable-cart {
 	background-color: var(--basic-red);
 }
 
@@ -191,6 +195,14 @@
 	background-color: var(--header-active-darkblue);
 }
 
+.output-button:hover img {
+	opacity: 1;
+}
+
+.output-button:focus img {
+	opacity: 0.3;
+}
+
 .header-search:focus,
 .header-search:active {
 	background-color: var(--basic-white);
@@ -206,6 +218,18 @@
 .enter-link:hover,
 .registration-link:hover {
 	color: var(--basic-red);
+}
+
+.enter-icon {
+	fill: #C5C5C5;
+}
+
+.enter-link:hover .enter-icon {
+	fill: var(--header-hover-blue);
+}
+
+.enter-link:active .enter-icon {
+	fill: #C5C5C5;
 }
 
 .enter-link:active,
