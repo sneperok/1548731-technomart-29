@@ -27,20 +27,27 @@
 	
 }
 
-.body {
-	min-width: 940px;
-	margin: 0;
-	padding: 0;
-	color: var(--basic-white);
-  	background-color: var(--basic-black);
+.page {
+	height: 100%;
+}
+
+.page-body {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+  	align-content: start;
 	/* font-family: "Cuprum", "Arial", sans-serif; */
 	/* font-family: "PT Sans", "Arial", sans-serif; */
 }
 
 .header-container {
-	min-width: 940px;
-	background-color: var(--header-basic);
+	margin-bottom: 200px;  /* ========================= временный отступ */
 	font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.header-rows {
+	display: grid;
+	background-color: #f1f5f7;
 }
 
 .header-container a {
@@ -66,18 +73,32 @@
 
 /* =============================== HEADER MENU ============================= */
 
-
-.header-logo {
-	background-color: var(--basic-red);
-	box-shadow: inset 0px -5px 0px rgba(0,0,0,0.24);
-}
-
-.header-menu {
-	min-width: 940px;
+.menu-background {
+	height: 42px;
+	margin-bottom: 50px;
 	background-color: var(--basic-darkblue);
 }
 
+.header-logo {
+	height: 47px;
+	background-color: var(--basic-red);
+	box-shadow: inset 0px -5px 0px rgba(0,0,0,0.24); 
+}
+
+.header-menu {
+	display: grid;
+	grid-template-columns: 0.7fr 1fr auto auto;
+	width: 940px;
+	height: 42px;
+	margin: 0 auto;
+}
+
 .header-output {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	height: inherit;
 	list-style: none;
 	font-size: 18px;
 	line-height: 24px;
@@ -88,6 +109,10 @@
 	color: var(--basic-white);
 	font-size: 18px;
 	line-height: 24px;
+	height: inherit;
+	border: none;
+	outline: none;
+	padding: 0px 20px 0px 20px;
 }
 
 .header-search {
@@ -96,6 +121,8 @@
 	color: var(--basic-white);
 	font-size: 18px;
 	line-height: 24px;
+	height: 42px;
+	width: 270px;
 }
 
 .search-icon {			/* Это будет кнопкой в форме */	
@@ -103,6 +130,19 @@
 	fill: white;
 }
 
+.header-cart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 50px;
+	margin-right: 25px;
+}
+
+.header-bookmark {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 .header-bookmark::before {
 	content: "";
@@ -112,6 +152,7 @@
 	background-image: url("../img/icon-bookmark.svg");
 	background-repeat: no-repeat;
 	opacity: 0.3;
+	margin-right: 10px;
 }
 
 .header-cart::before {
@@ -122,18 +163,45 @@
 	background-image: url("../img/icon-cart.svg");
 	background-repeat: no-repeat;
 	opacity: 0.3;
+	margin-right: 10px;
 }
 
 /* =================================== HEADER INFO =========================== */
 
+
+.header-info {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 940px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
 .header-general-info {
+	align-self: center;
+	padding-left: 20px;
+	margin: 0;
 	font-style: italic;
 	font-size: 16px;
 	line-height: 23px;
 	color: var(--basic-red);
 }
 
+.header-contacts {
+	width: 270px;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	flex-shrink: 0;
+}
+
 .header-contacts .header-phone {
+	padding: 5px 25px 5px 25px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 30px;
@@ -143,6 +211,7 @@
 }
 
 .header-phone::before {
+	margin-right: 15px;
 	content: "";
 	display: inline-block;
 	width: 19px;
@@ -153,16 +222,44 @@
 
 .header-adress {
 	color: var(--basic-lightblue);
+	font-size: 14px;
+	line-height: 24px;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
 }
 
 .header-info .enter-link,
 .header-info .registration-link {
 	color: var(--basic-black);
 	background-color: var(--basic-white);
+	padding: 12px 26px 12px 26px;
 }
 
 .useable-cart {
 	background-color: var(--basic-red);
+}
+
+.enter-registration-menu {
+	font-size: 21px;
+	line-height: 21px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+.registration-link {
+	margin-left: 10px;
+}
+
+.enter-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.enter-icon {
+	margin-right: 5px;
 }
 
 /* ============================ HEADER LOGIN =============================== */
@@ -197,12 +294,18 @@
 
 .header-navigation {
 	width: 940px;
+	margin: 0 auto;
 	background-color: var(--basic-lightblue);
 	box-shadow: inset 0px -5px 0px var(--basic-darkblue);
+	margin-bottom: 60px;
 }
 
 .site-navigation {
-	padding: 0;
+	height: 60px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0px 30px 0px 30px;
 	margin: 0;
 	list-style: none;
 	font-size: 18px;
@@ -403,6 +506,7 @@
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
+	color: var(--basic-lightblue);
 }
 
 .product-list {
@@ -537,6 +641,7 @@
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
+	color: var(--basic-lightblue);
 }
 
 .manufacturer-item {
@@ -923,4 +1028,8 @@
 .catalog-info p {
 	font-size: 13px;
 	line-height: 24px;
+}
+
+.modal-hidden {
+	display: none;
 }
