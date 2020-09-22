@@ -41,12 +41,8 @@
 }
 
 .header-container {
-	margin-bottom: 200px;  /* ========================= временный отступ */
+	margin-bottom: 50px;  /* ========================= временный отступ */
 	font-family: "Cuprum", "Arial", sans-serif;
-}
-
-.header-rows {
-	display: grid;
 	background-color: #f1f5f7;
 }
 
@@ -115,7 +111,15 @@
 	padding: 0px 20px 0px 20px;
 }
 
+.search-form {
+	position: relative;
+}
+input[value="Поиск:"] {
+	padding-left: 40px;
+}
+
 .header-search {
+	position: absolute;
 	background-color: inherit;
 	border: none;
 	color: var(--basic-white);
@@ -126,19 +130,22 @@
 }
 
 .search-icon {			/* Это будет кнопкой в форме */	
+	position: absolute;
+	top: 10px;
+	left: 10px;
 	fill-opacity: 0.3;
-	fill: white;
+	fill: var(--basic-white);
 }
 
 .header-cart {
+	padding: 9px 25px 9px 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-left: 50px;
-	margin-right: 25px;
 }
 
 .header-bookmark {
+	padding: 9px 25px 9px 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -174,12 +181,13 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	width: 940px;
 	margin: 0 auto;
+	padding: 0 10px;
 	margin-bottom: 40px;
 }
 
 .header-general-info {
 	align-self: center;
-	padding-left: 20px;
+	padding-left: 25px;
 	margin: 0;
 	font-style: italic;
 	font-size: 16px;
@@ -189,19 +197,13 @@
 
 .header-contacts {
 	width: 270px;
-	display: flex;
-	flex-direction: column;
-	align-self: center;
-	flex-shrink: 0;
 }
 
 .header-contacts .header-phone {
 	padding: 5px 25px 5px 25px;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 30px;
@@ -297,19 +299,22 @@
 	margin: 0 auto;
 	background-color: var(--basic-lightblue);
 	box-shadow: inset 0px -5px 0px var(--basic-darkblue);
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 }
 
 .site-navigation {
-	height: 60px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding: 0px 30px 0px 30px;
+	padding: 15px 25px 15px 25px;
 	margin: 0;
 	list-style: none;
 	font-size: 18px;
 	line-height: 24px;
+}
+
+.site-navigation a {
+	padding: 15px 25px 15px 25px;
 }
 
 /* ============================ HEADER HOVER/LINK/FOCUS =================== */
@@ -337,12 +342,15 @@
 	opacity: 0.3;
 }
 
-.search-icon:hover {			/* Это будет кнопкой в форме */					
+.search-form:hover .search-icon {		/* Это будет кнопкой в форме */					
 	fill-opacity: 1;
 }
 
-.search-icon:focus {
-	fill: var(--basic-red);		/* Это будет кнопкой в форме */	
+.search-form:focus .search-icon,
+.search-form:active .search-icon {
+	fill: var(--basic-red);				/* Это будет кнопкой в форме */	
+	fill-opacity: 1;
+	z-index: 1;
 }
 
 .header-search:focus,
@@ -399,15 +407,68 @@
 /* ============================== MAIN PROMO ======================== */
 
 /* .promo-slider {background-color: rgba(0,0,0,0.25);} */
+.container {
+	width: 940px;
+	margin: 0 auto;
+}
 
-.promo-slider { 		/* ================ Сделал временный флекс для удобства отображения */
-	display: flex;
+.drill-page {
+	display: none;
+}
+
+.promo-container {
+	font-family: "Cuprum", "Arial", sans-serif;
+	display: grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 123px);
+	margin-bottom: 50px;
+}
+
+.promo-slider {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 4;
+}
+
+.perforators-page {
+	position: relative;
+}
+
+.perforators-page-content {
+	position: absolute;
+	top: 0px;
+}
+
+.promo-list {
+	display: grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.promo-item {
+	width: 300px;	
+	height: 123px;
 }
 
 .promo-slider h2 {
-	font-size: 30px;
-	line-height: 30px;
+	font-size: 36px;
+	line-height: 36px;
+	margin: 0;
 	text-transform: uppercase;
+	color: var(--basic-white);
+}
+
+.promo-slider p {
+	color: var(--basic-white);
+	font-size: 18px;
+	line-height: 24px;
+	margin: 0;
 }
 
 .materials {
@@ -436,6 +497,8 @@
 	background-image: url("../img/sales-icon.svg");
 	background-repeat: no-repeat;
 	background-position: 80%;
+	grid-column-start: 3;
+	grid-column-end: 4;
 }
 
 .delivery {
@@ -443,24 +506,12 @@
 	background-image: url("../img/delivery-icon.svg");
 	background-repeat: no-repeat;
 	background-position: 80%;
-}
-
-.promo-container {
-	font-family: "Cuprum", "Arial", sans-serif;
-}
-
-.promo-list {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.promo-item {
-	width: 300px;	/* =========== Задал размеры для удобства отображения */
-	height: 123px;
+	grid-column-start: 3;
+	grid-column-end: 4;
 }
 
 .promo-item h3 {
+	margin: 0;
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 30px;
@@ -496,6 +547,10 @@
 }
 
 /* =========================== MAIN CATALOG ========================= */
+
+.product-container {
+	margin-bottom: 60px;
+}
 
 .popular-item {
 	background-color: #f9f5f0;
@@ -632,6 +687,10 @@
 
 /* ======================= MANUFACTURER ======================== */
 
+.manufacturer-container {
+	margin-bottom: 60px;
+}
+
 .popular-manufacturer {
 	background-color: #f9f5f0;
 	font-family: "Cuprum", "Arial", sans-serif;
@@ -657,9 +716,11 @@
 .manufacturer-list {
 	padding: 0;
 	width: 940px;	/* ================ Сделал временный флекс для удобства отображения */
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-row-gap: 20px;
+	grid-column-gap: 20px;
 	list-style: none;
 }
 
@@ -675,9 +736,25 @@
 
 /* ========================== SERVICE-DELIVERY =========================== */
 
-.service-delivery-container {
+.background-service-delivery {
 	background-color: #f1f5f7;
+	height: 522px;
+	margin-bottom: 50px;
+	
+}
+
+.service-delivery-container {
 	font-family: "Cuprum", "Arial", sans-serif;
+	width: 940px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.service-container {
+	grid-column-start: 1;
+	grid-column-end: 3;
 }
 
 .service-container h2 {
@@ -687,25 +764,23 @@
 	color: var(--basic-black);
 }
 
-.service-delivery-container::before {
+ .service-delivery-container::before {
 	position: absolute;
 	content: "";
-/*
-	width: 468px;  ========= Размеры картинки грузовика
-	height: 261px;
-*/
-	width: 1200px; /* Временные размеры блока для позиционирования грузовика */
+	width: 1200px; 
 	height: 522px;
 	background-image: url("../img/Delivery-track.png");
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
-}
+	background-position: 64.5% 100%;
+} 
+
 
 .delivery-container h2 {
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
 	color: var(--basic-lightblue);
+	margin-top: 0;
 }
 
 .service-container p,
@@ -718,6 +793,9 @@
 .service-delivery-list {
 	width: 240px;	/* Задал размер для удобства */
 	list-style: none;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	padding: 0;
 }
 
 .service-delivery-item {
@@ -752,6 +830,9 @@
 
 .info-container {
 	font-family: "Cuprum", "Arial", sans-serif;
+	display: grid;
+	grid-template-columns: 1fr max-content;
+	margin-bottom: 50px;
 }
 
 .info-company h2,
@@ -780,17 +861,39 @@
 	font-family: "Cuprum", "Arial", sans-serif;
 }
 
+.footer-top-container {
+	width: 940px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: max-content max-content;
+	grid-template-rows: max-content max-content;
+}
+
 .footer-container a {
 	text-decoration: none;
 }
 
 .footer-top {
 	background-color: var(--basic-lightblue);
+	margin-bottom: 0;
 }
 
 .footer-logo {
 	background-color: var(--basic-red);
 	box-shadow: inset 0px -5px 0px rgba(0,0,0,0.24);
+}
+
+.footer-adress {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+.footer-navigation {
+	margin: 0;
+	padding: 0;
+	display: flex;
 }
 
 .vk-icon-shape,
@@ -828,6 +931,7 @@
 	color: #f3f7f9;
 	font-size: 18px;
 	line-height: 24px;
+	margin: 0;
 }
 
 .footer-phone {
@@ -873,6 +977,15 @@
 	line-height: 18px;
 }
 
+.footer-bottom-container {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.footer-copyright p {
+	margin: 0;
+}
+
 .footer-link {
 	color: #ffd180;
 }
@@ -883,6 +996,14 @@
 
 .social-icon-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.comeback p,
+.develop p {
+	margin: 0;
 }
 
 .footer-link:hover {
