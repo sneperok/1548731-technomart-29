@@ -76,6 +76,7 @@
 }
 
 .header-logo {
+	position: relative;
 	height: 47px;
 	background-color: var(--basic-red);
 	box-shadow: inset 0px -5px 0px rgba(0,0,0,0.24); 
@@ -87,6 +88,12 @@
 	width: 940px;
 	height: 42px;
 	margin: 0 auto;
+}
+
+.header-svg {
+	position: absolute;
+	top: 25%;
+	left: 22%;
 }
 
 .header-output {
@@ -865,8 +872,10 @@ input[value="Поиск:"] {
 	width: 940px;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: max-content max-content;
-	grid-template-rows: max-content max-content;
+	grid-template-columns: max-content 1fr;
+	grid-template-rows: min-content min-content;
+	grid-row-gap: 20px;
+	grid-column-gap: 50px;
 }
 
 .footer-container a {
@@ -875,12 +884,21 @@ input[value="Поиск:"] {
 
 .footer-top {
 	background-color: var(--basic-lightblue);
-	margin-bottom: 0;
+	padding-bottom: 50px;
 }
 
 .footer-logo {
+	width: 220px;
+	height: 68px;
+	position: relative;
 	background-color: var(--basic-red);
 	box-shadow: inset 0px -5px 0px rgba(0,0,0,0.24);
+}
+
+.footer-svg {
+	position: absolute;
+	top: 28%;
+	left: 18%;
 }
 
 .footer-adress {
@@ -893,7 +911,6 @@ input[value="Поиск:"] {
 .footer-navigation {
 	margin: 0;
 	padding: 0;
-	display: flex;
 }
 
 .vk-icon-shape,
@@ -940,7 +957,18 @@ input[value="Поиск:"] {
 
 .firstlist,
 .secondlist {
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 25px 0px 25px;
 	list-style: none;
+}
+
+.firstlist {
+	margin-top: 40px;
+}
+
+.secondlist {
+	margin-top: 5px;
 }
 
 .firstlist a {
@@ -953,6 +981,7 @@ input[value="Поиск:"] {
 	font-size: 18px;
 	line-height: 24px;
 	color: #ffd180;
+	padding-left: 25px;
 }
 
 .firstlist-item:hover,
@@ -980,6 +1009,9 @@ input[value="Поиск:"] {
 .footer-bottom-container {
 	width: 940px;
 	margin: 0 auto;
+	padding: 30px 0;
+	display: flex;
+	justify-content: space-between
 }
 
 .footer-copyright p {
