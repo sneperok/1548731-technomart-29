@@ -21,11 +21,13 @@
 							</svg>
 						</a> 
 						<form class="search-form">
-							<label>
-								<svg class="search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
-								</svg>
-								<input class="header-search" type="search" name="search" value="Поиск:">
+							<label for="search">
+								<a href="">
+									<svg class="search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
+									</svg>
+								</a>
+								<input class="header-search" type="search" name="search" id="search" value="Поиск:">
 
 							</label>
 						</form>
@@ -120,33 +122,45 @@
 						</div>
 						<div class="drill-page">
 							<img src="img/Drill.jpg" width="620" height="266" alt="Строитель с дрелью">
-							<h2>Дрели</h2> 
-								<p>
-									Соседям на радость!
-								</p>
-								<a class="catalog-button main-button button" href="catalog.html">Открыть каталог</a>
+								<div class="perforators-page-content">
+									<h2>Дрели</h2> 
+										<p>
+											Соседям на радость!
+										</p>
+										<a class="catalog-button main-button button" href="catalog.html">Открыть каталог</a>
+								</div>
 						</div>
 					</div>
 					<ul class="promo-list">
 						<li class="promo-item materials">
-							<h3>Материалы</h3>
-							<a class="button promo-button" href="">На любой вкус</a>
+							<div class="promo-item-content">
+								<h3>Материалы</h3>
+								<a class="button promo-button" href="">На любой вкус</a>
+							</div>
 						</li>
 						<li class="promo-item tools">
-							<h3>Инструмент</h3>
-							<a class="button promo-button" href="">На все случаи</a>
+							<div class="promo-item-content">
+								<h3>Инструмент</h3>
+								<a class="button promo-button" href="">На все случаи</a>
+							</div>
 						</li>
 						<li class="promo-item technics">
-							<h3>Техника</h3>
-							<a class="button promo-button" href="">Для стройки</a>
+							<div class="promo-item-content">
+								<h3>Техника</h3>
+								<a class="button promo-button" href="">Для стройки</a>
+							</div>
 						</li>
 						<li class="promo-item sales">
-							<h3>Скидка 50%</h3>
-							<a class="button promo-button" href="">На 350 товаров</a>
+							<div class="promo-item-content">
+								<h3>Скидка 50%</h3>
+								<a class="button promo-button" href="">На 350 товаров</a>
+							</div>
 						</li>
 						<li class="promo-item delivery">
-							<h3>Доставка</h3>
-							<a class="button promo-button" href="">Бесплатно</a>
+							<div class="promo-item-content">
+								<h3>Доставка</h3>
+								<a class="button promo-button" href="">Бесплатно</a>
+							</div>
 						</li>
 					</ul>
 				</section>
@@ -154,7 +168,7 @@
 			<section class="product-container">
 				<div class="popular-item">
 					<h2>Популярные товары:</h2>
-					<a class="button main-button" href="">Все популярные товары</a>
+					<a class="button main-button popular-button" href="">Все популярные товары</a>
 				</div>
 				<ul class="product-list">
 					<li class="product-item">
@@ -162,40 +176,48 @@
 							<a class="buy button" href="">Купить</a>
 							<a class="bookmark button" href="">В Закладки</a>
 						</div>
-						<img src="img/Bosch%20BFG%209000.png" width="184" height="164" alt="Фото модели BFG9000">
-						<h3>Перфоратор BOSCH BFG 9000</h3>
-						<span>32500 Р.</span>
-						<p><a class="button red-button" href="">25500 Р.</a></p>
+						<div class="product-item-content">
+							<img src="img/Bosch%20BFG%209000.png" width="184" height="164" alt="Фото модели BFG9000">
+							<h3>Перфоратор BOSCH BFG 9000</h3>
+							<span>32500 Р.</span>
+							<p><a class="button red-button" href="">25500 Р.</a></p>
+						</div>
 					</li>
 					<li class="product-item">
 						<div class="hidden-item">
 							<a class="buy button" href="">Купить</a>
 							<a class="bookmark button" href="">В Закладки</a>
 						</div>
-						<img src="img/Bosch%20BFG%203000.png" width="127" height="112" alt="Фото модели BFG3000">
-						<h3>Перфоратор BOSCH BFG 3000</h3>
-						<span>22500 Р.</span>
-						<p><a class="button red-button" href="">15500 Р.</a></p>
+						<div class="product-item-content">
+							<img src="img/Bosch%20BFG%203000.png" width="127" height="112" alt="Фото модели BFG3000">
+							<h3>Перфоратор BOSCH BFG</h3>
+							<span>22500 Р.</span>
+							<p><a class="button red-button" href="">15500 Р.</a></p>
+						</div>
 					</li>
 					<li class="product-item">
 						<div class="hidden-item">
 							<a class="buy button" href="">Купить</a>
 							<a class="bookmark button" href="">В Закладки</a>
 						</div>
-						<img src="img/Bosch%20BFG%206000.png" width="144" height="128" alt="Фото модели BFG6000">
-						<h3>Перфоратор BOSCH BFG 6000</h3>
-						<span>30500 Р.</span>
-						<p><a class="button red-button" href="">25500 Р.</a></p>
+						<div class="product-item-content">
+							<img src="img/Bosch%20BFG%206000.png" width="144" height="128" alt="Фото модели BFG6000">
+							<h3>Перфоратор BOSCH BFG 6000</h3>
+							<span>30500 Р.</span>
+							<p><a class="button red-button" href="">25500 Р.</a></p>
+						</div>
 					</li>
 					<li class="product-item">
 						<div class="hidden-item">
 							<a class="buy button" href="">Купить</a>
 							<a class="bookmark button" href="">В Закладки</a>
 						</div>
-						<img src="img/Bosch%20BFG%202000.png" width="127" height="112" alt="Фото модели BFG2000">
-						<h3>Перфоратор BOSCH BFG 2000</h3>
-						<span class="span">1</span>
-						<p><a class="button red-button" href="">12500 Р.</a></p>
+						<div class="product-item-content">
+							<img src="img/Bosch%20BFG%202000.png" width="127" height="112" alt="Фото модели BFG2000">
+							<h3>Перфоратор BOSCH BFG 2000</h3>
+							<span class="span">1</span>
+							<p><a class="button red-button" href="">12500 Р.</a></p>
+						</div>
 					</li>
 				</ul>
 			</section>
@@ -203,7 +225,7 @@
 			<section class="manufacturer-container">
 				<div class="popular-manufacturer">
 					<h2>Популярные производители:</h2>
-					<a class="button main-button" href="">Все производители</a>
+					<a class="button main-button manufacturer-button" href="">Все производители</a>
 				</div>
 				<ul class="manufacturer-list">
 					<li class="manufacturer-item">
@@ -278,7 +300,7 @@
 							гастарбайтерах
 						</p>
 						<p>
-							Мы можем доставить ваш товар в самый отдаленные точки России! 
+							Мы можем доставить ваш товар в самый отдаленные точки России!<br>
 							Техномарт работает со многими транспортными команиями:
 						</p>
 							<ul class="info-list">
@@ -292,7 +314,7 @@
 									ЖелДорЭкспедиция
 								</li>
 							</ul>
-							<a class="button main-button" href="">Подробнее о компании</a>
+							<a class="button main-button info-button" href="">Подробнее о компании</a>
 				</div>
 				<div class="info-contacts">
 					<h2>Контакты</h2>
@@ -301,7 +323,7 @@
 							заехав в наш офис:
 						</p>
 						<!-- <iframe> -->
-						<a class="button main-button" href="">Заблудились? Напишите нам!</a>
+						<a class="button main-button map-button" href="">Заблудились? Напишите нам!</a>
 				</div>
 			</section>
 				
