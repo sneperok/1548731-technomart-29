@@ -548,9 +548,10 @@ input[value="Поиск:"] {
 	background-repeat: no-repeat;
 	background-position: 85%;
 	position: relative;
+	overflow: hidden;
 }
 
-.materials::before {
+.materials::after {
 	content: "NEW";
 	position: absolute;
 	display: flex;
@@ -563,10 +564,9 @@ input[value="Поиск:"] {
 	height: 30px;
 	background-color: var(--basic-red);
 	transform: rotate(45deg);
-	overflow: hidden;
 	font-size: 14px;
 	line-height: 18px;
-	
+	font-family: "Cuprum", "Arial", sans-serif;
 }
 
 .tools {
@@ -693,6 +693,25 @@ input[value="Поиск:"] {
 	border: 1px solid var(--opacitymaxgray);
 	box-sizing: border-box;
 	text-align: center;
+	overflow: hidden;
+}
+
+.product-item:nth-child(2n)::after {
+	content: "NEW";
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 5px;
+	right: -28px;
+	color: var(--basic-white);
+	width: 100px;
+	height: 30px;
+	background-color: var(--basic-red);
+	transform: rotate(45deg);
+	font-size: 14px;
+	line-height: 18px;
+	font-family: "Cuprum", "Arial", sans-serif;
 }
 
 .product-item-content {
