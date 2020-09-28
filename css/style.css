@@ -930,18 +930,18 @@ input[value="Поиск:"] {
 }
 
 
-/*
+
  .service-delivery-container::before {
 	position: absolute;
 	content: "";
 	bottom: 5px;
-	right: 5px;
+	right: 0px;
 	width: 468px;
 	height: 261px;
 	background-image: url("../img/Delivery-track.png");
 	background-repeat: no-repeat;
 } 
-*/
+
 
 
 
