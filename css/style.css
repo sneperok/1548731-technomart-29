@@ -930,6 +930,7 @@ input[value="Поиск:"] {
 }
 
 
+/*
  .service-delivery-container::before {
 	position: absolute;
 	content: "";
@@ -940,6 +941,7 @@ input[value="Поиск:"] {
 	background-image: url("../img/Delivery-track.png");
 	background-repeat: no-repeat;
 } 
+*/
 
 
 
