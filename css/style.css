@@ -319,7 +319,7 @@ input[value="Поиск:"] {
 
 .login-item {
 	display: inline;
-	text-align: 16px;
+	font-size: 16px;
 	line-height: 18px;
 }
 
@@ -696,6 +696,7 @@ input[value="Поиск:"] {
 	overflow: hidden;
 }
 
+
 .product-item:nth-child(2n)::after {
 	content: "NEW";
 	position: absolute;
@@ -713,6 +714,7 @@ input[value="Поиск:"] {
 	line-height: 18px;
 	font-family: "Cuprum", "Arial", sans-serif;
 }
+
 
 .product-item-content {
 	width: 220px;
@@ -762,6 +764,7 @@ input[value="Поиск:"] {
 	display: flex;
 }
 
+
 .buy::before {
 	content: "";
 	display: inline-block;
@@ -772,6 +775,7 @@ input[value="Поиск:"] {
 	opacity: 0.3;
 	margin-right: 10px;
 }
+
 
 .bookmark {
 	font-family: "Cuprum", "Arial", sans-serif;
@@ -931,6 +935,7 @@ input[value="Поиск:"] {
 
 
 
+
  .service-delivery-container::before {
 	position: absolute;
 	content: "";
@@ -941,6 +946,7 @@ input[value="Поиск:"] {
 	background-image: url("../img/Delivery-track.png");
 	background-repeat: no-repeat;
 } 
+
 
 
 
@@ -1027,8 +1033,12 @@ input[value="Поиск:"] {
 	width: 460px;
 }
 
-.info-contacts {
+.info-content {
 	padding-left: 160px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	
 }
 
 .info-company p,
@@ -1036,12 +1046,14 @@ input[value="Поиск:"] {
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 24px;
+	margin-top: 0;
 }
 
 .info-list {
-	margin-top: 0;
+	margin: 0;
 	padding: 0;
 	list-style: none;
+	margin-bottom: 20px;
 }
 
 .info-item {
@@ -1049,6 +1061,7 @@ input[value="Поиск:"] {
 	line-height: 24px;
 	position: relative;
 	padding-left: 40px;
+	margin-bottom: 10px
 }
 
 .info-item::before {
