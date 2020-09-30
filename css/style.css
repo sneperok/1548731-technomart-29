@@ -37,6 +37,11 @@
 	--icon: #212A3A;
 	--logoinset: rgba(0,0,0,0.24);
 	--lightgold: #ffd180;
+	/* Catalog */
+	--catalog-lightsky: #f2f6f8;
+	--catalog-pink: #f7f3ec;
+	--sorting-opacity: rgba(0,0,0,0.3);
+	--number-gray: #e5e5e5;
 }
 
 .page {
@@ -56,6 +61,10 @@
 	margin-bottom: 50px;  /* ========================= временный отступ */
 	font-family: "Cuprum", "Arial", sans-serif;
 	background-color: var(--opacitygray);
+}
+
+.header-catalog {
+	margin-bottom: 20px;
 }
 
 .header-container a {
@@ -78,6 +87,7 @@
 	text-transform: uppercase;
 	color: var(--basic-white);
 }
+
 
 /* =============================== HEADER MENU ============================= */
 
@@ -315,10 +325,11 @@ input[value="Поиск:"] {
 	text-align: center;
 	padding: 0;
 	margin: 0;
+	margin-top: 3px;
 }
 
 .login-item {
-	display: inline;
+	display: inline-block;
 	font-size: 16px;
 	line-height: 18px;
 }
@@ -339,9 +350,27 @@ input[value="Поиск:"] {
 	color: var(--active-greylight);
 }
 
+
 .login-list li:first-child {
 	list-style: none;
 }
+
+.cabinet {
+	position: relative;
+	padding-left: 30px;
+}
+
+.cabinet:before {
+	position: absolute;
+	top: 7px;
+	left: 11px;
+	content: "";
+	width: 5px;
+	height: 5px;
+	background-color: var(--basic-lightblue);
+	border-radius: 50%;
+}
+
 
 
 /* =========================== HEADER NAVIGATION ============================= */
@@ -673,7 +702,7 @@ input[value="Поиск:"] {
 .product-list {
 	padding: 0;
 	width: 940px;
-	display: flex;		/* ================ Сделал временный флекс для удобства отображения */
+	display: flex;		
 	flex-wrap: wrap;
 	justify-content: space-between;
 	font-family: "Cuprum", "Arial", sans-serif;
@@ -682,7 +711,7 @@ input[value="Поиск:"] {
 
 .product-item {
 	position: relative;
-	display: flex;		/* ================ Сделал временный флекс для удобства отображения */
+	display: flex;		
 	flex-direction: column;
 	justify-content: center;
   	align-items: center;
@@ -697,7 +726,7 @@ input[value="Поиск:"] {
 }
 
 
-.product-item:nth-child(2n)::after {
+.product-item:not(.item-catalog):nth-child(2n)::after {
 	content: "NEW";
 	position: absolute;
 	display: flex;
@@ -726,6 +755,37 @@ input[value="Поиск:"] {
 }
 
 
+/*
+.price-button {
+	background-color: var(--basic-red);
+	position: relative;
+}
+*/
+
+.price-button p {
+	margin: 0;
+	background-color: var(--basic-red);
+	position: relative; 
+	width: 120px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.price-button p:after{
+	border: 20px solid transparent;	
+	border-left: 20px solid var(--basic-red);
+    content:'';
+    position: absolute;
+    right:-40px;
+    top: 0px;
+   
+}
+
 .product-item h3 {
 	max-width: 185px;
 	font-size: 18px;
@@ -739,10 +799,11 @@ input[value="Поиск:"] {
 	text-decoration-line: line-through;
 	text-transform: uppercase;
 	color: var(--darkgray);
+	margin-bottom: 15px;
 }
 
 .hidden-item {
-	display: flex;		/* ================ Сделал временный флекс для удобства отображения */
+	display: flex;	
 	flex-direction: column;
 	justify-content: flex-start;
 	position: absolute;
@@ -1274,19 +1335,40 @@ input[value="Поиск:"] {
 	font-family: "PT Sans", "Arial", sans-serif;
 }
 
+.active-cart {
+	background-color: var(--basic-red);
+}
+
 .breadcrumb {
+	font-size: 13px;
+	line-height: 18px;
 	list-style: none;
 	padding: 0;
+	margin: 0;
+	margin-bottom: 20px;
 }
 
 .breadcrumb-item {
 	text-transform: uppercase;
-	display: inline;
+	display: inline-block;
+	position: relative;
 }
 
 .breadcrumb-item a {
 	text-decoration: none;
 	color: var(--basic-black);
+	margin: 0px 30px 0px 0px;
+}
+
+.breadcrumb-item:nth-child(n+2)::before {
+	position: absolute;
+	left: -18px;
+	content: "";
+	width: 8px;
+	height: 15px;
+	background-image: url("../img/icon-right-small.png");
+	background-repeat: no-repeat;
+	
 }
 
 .catalog-main-name h2 {
@@ -1298,7 +1380,12 @@ input[value="Поиск:"] {
 }
 
 .catalog-main-name {
-	background-color: #f2f6f8;
+	background-color: var(--catalog-lightsky);;
+	height: 90px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 20px;
 }
 
 .grid-container-catalog {
@@ -1317,7 +1404,7 @@ input[value="Поиск:"] {
 }
 
 .catalog-filter {
-	background-color: #f7f3ec;
+	background-color: var(--catalog-pink);
 	width: 220px;
 	height: 720px;
 }
@@ -1331,8 +1418,16 @@ input[value="Поиск:"] {
 }
 
 .sorting {
+	background-color: var(--catalog-pink);
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
+	align-items: center;
+	height: 40px;
+}
+
+.sorting h2 {
+	flex-grow: 1;
+	margin-left: 15px;
 }
 
 .sorting-list {
@@ -1343,6 +1438,7 @@ input[value="Поиск:"] {
 
 .sorting-item {
 	display: inline;
+	margin-right: 57px;
 }
 
 .sorting-item a {
@@ -1350,7 +1446,7 @@ input[value="Поиск:"] {
 	font-size: 13px;
 	line-height: 18px;
 	text-decoration: none;
-	color: rgba(0,0,0,0.3);
+	color: var(--sorting-opacity);
 	border-bottom: 1px dotted var(--basic-red);
 }
 
@@ -1379,6 +1475,7 @@ input[value="Поиск:"] {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
+	margin-bottom: 50px;
 }
 
 .sorting-item a:hover {
@@ -1392,8 +1489,29 @@ input[value="Поиск:"] {
 	border: none;
 }
 
-.sorting {
-	background-color: #f7f3ec;
+.down-svg {
+	margin-right: 15px;
+}
+
+.up-svg {
+	margin-right: 20px;
+}
+
+.up-svg,
+.down-svg {
+	fill: var(--active-greylight);
+}
+
+.up-svg:hover,
+.down-svg:hover {
+	fill: var(--basic-black);
+}
+
+.up-svg:active,
+.down-svg:active,
+.up-svg:focus,
+.down-svg:focus {
+	fill: var(--basic-red);
 }
 
 .number-list {
@@ -1405,10 +1523,11 @@ input[value="Поиск:"] {
 
 .number-item {
 	display: inline-block;
-	border: 1px solid #e5e5e5;
+	border: 1px solid var(--number-gray);
 	box-sizing: border-box;
 	border-radius: 2px;
 	padding: 10px 15px 10px 15px;
+	margin: 0px 10px 0px 0px;
 }
 
 .number-item a {
@@ -1418,8 +1537,12 @@ input[value="Поиск:"] {
 	text-decoration: none;
 }
 
+.number-item:last-child {
+	padding: 10px 30px 10px 30px;
+}
+
 .number-item:hover {
-	border: 1px solid #c5c5c5;
+	border: 1px solid var(--active-greylight);
 }
 
 .number-item:active,
@@ -1443,7 +1566,7 @@ input[value="Поиск:"] {
 .catalog-info {
 	padding-top: 50px;
 	padding-bottom: 50px;
-	background-color: #f1f5f7;
+	background-color: var(--opacitygray);
 }
 
 .catalog-info h2 {
@@ -1458,4 +1581,22 @@ input[value="Поиск:"] {
 	margin: 0;
 	font-size: 13px;
 	line-height: 24px;
+}
+
+.item-catalog:nth-child(2n)::after {
+	content: "NEW";
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 5px;
+	right: -28px;
+	color: var(--basic-white);
+	width: 100px;
+	height: 30px;
+	background-color: var(--basic-red);
+	transform: rotate(45deg);
+	font-size: 14px;
+	line-height: 18px;
+	font-family: "Cuprum", "Arial", sans-serif;
 }
