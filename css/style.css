@@ -779,9 +779,9 @@ input[value="Поиск:"] {
 .price-button p:after{
 	border: 20px solid transparent;	
 	border-left: 20px solid var(--basic-red);
-    content:'';
+    content: "";
     position: absolute;
-    right:-40px;
+    right: -40px;
     top: 0px;
    
 }
@@ -1340,6 +1340,7 @@ input[value="Поиск:"] {
 }
 
 .breadcrumb {
+	display: flex;
 	font-size: 13px;
 	line-height: 18px;
 	list-style: none;
@@ -1349,8 +1350,10 @@ input[value="Поиск:"] {
 }
 
 .breadcrumb-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-transform: uppercase;
-	display: inline-block;
 	position: relative;
 }
 
@@ -1431,14 +1434,14 @@ input[value="Поиск:"] {
 }
 
 .sorting-list {
+	display: flex;
 	padding: 0;
 	margin: 0;
 	list-style: none;
 }
 
 .sorting-item {
-	display: inline;
-	margin-right: 57px;
+	margin-right: 60px;
 }
 
 .sorting-item a {
