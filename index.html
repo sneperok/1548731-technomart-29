@@ -110,17 +110,17 @@
 			<div class="container">
 				<section class="promo-container">
 					<div class="promo-slider">
-						<div class="perforators-page">
-								<img src="img/Perforators.jpg" width="620" height="266" alt="Строитель с перфоратором">
-									<div class="perforators-page-content">
-										<h2>Пефрораторы</h2> 
-											<p>
-												Настоящие мужские игрушки
-											</p>
-											<a class="catalog-button main-button button" href="catalog.html">Открыть каталог</a>
-									</div>
+						<div class="perforators-page slide current-slide">
+							<img src="img/Perforators.jpg" width="620" height="266" alt="Строитель с перфоратором">
+								<div class="perforators-page-content">
+									<h2>Пефрораторы</h2> 
+										<p>
+											Настоящие мужские игрушки
+										</p>	
+										<a class="catalog-button main-button button" href="catalog.html">Открыть каталог</a>
+								</div>
 						</div>
-						<div class="drill-page">
+						<div class="drill-page slide">
 							<img src="img/Drill.jpg" width="620" height="266" alt="Строитель с дрелью">
 								<div class="perforators-page-content">
 									<h2>Дрели</h2> 
@@ -130,9 +130,15 @@
 										<a class="catalog-button main-button button" href="catalog.html">Открыть каталог</a>
 								</div>
 						</div>
+						<button class="back" type="button"></button>
+						<button class="forward" type="button"></button>
+						<div class="checked-slide">
+							<button type="button" class="current"></button>
+							<button type="button"></button>
+						</div>
 					</div>
 					<ul class="promo-list">
-						<li class="promo-item materials">
+						<li class="promo-item materials new">
 							<div class="promo-item-content">
 								<h3>Материалы</h3>
 								<a class="button promo-button" href="">На любой вкус</a>
@@ -187,7 +193,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="product-item">
+					<li class="product-item new">
 						<div class="hidden-item">
 							<a class="buy button" href="">Купить</a>
 							<a class="bookmark button" href="">В Закладки</a>
@@ -219,7 +225,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="product-item">
+					<li class="product-item new">
 						<div class="hidden-item">
 							<a class="buy button" href="">Купить</a>
 							<a class="bookmark button" href="">В Закладки</a>
@@ -281,26 +287,46 @@
 								Хороший интернет-магазин отличается от плохого не только ценами!
 								Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
 							</p>
-					</div>	
-					<ul class="service-delivery-list">					
-						<li class="service-delivery-item">
-							<a href="">Доставка</a>
-						</li>
-						<li class="service-delivery-item">
-							<a href="">Гарантия</a>
-						</li>
-						<li class="service-delivery-item">
-							<a href="">Кредит</a>
-						</li>
-					</ul>
-					<div class="delivery-container">
-						<h2>Доставка</h2>
-							<p>
-								Мы с удовольствием доставим ваш товар прямо<br>		<!-- Оставил <br> потому что текст неестетвенно перенесен -->
-								к вашему подъезду совершенно бесплатно!<br>
-								Ведь мы неплохо заработаем,<br>
-								поднимая его на ваш этаж!
-							</p>
+					</div>
+					<div class="service-delivery-slider">
+						<ul class="service-delivery-list">					
+							<li class="service-delivery-item current-item">
+								<a href="">Доставка</a>
+							</li>
+							<li class="service-delivery-item">
+								<a href="">Гарантия</a>
+							</li>
+							<li class="service-delivery-item">
+								<a href="">Кредит</a>
+							</li>
+						</ul>
+						<div class="delivery-container slide current-slide">
+							<h2>Доставка</h2>
+								<p>
+									Мы с удовольствием доставим ваш товар прямо<br>		<!-- Оставил <br> потому что текст неестетвенно перенесен -->
+									к вашему подъезду совершенно бесплатно!<br>
+									Ведь мы неплохо заработаем,<br>
+									поднимая его на ваш этаж!
+								</p>
+						</div>
+						<div class="garant-container slide">
+							<h2>Гарантия</h2>
+								<p>
+									Если купленный у нас товар поломается или заскрипит,<br>
+									а также в случае пожара,спровоцированного его<br>
+									возгоранием, вы всегда можете быть уверены в нашей<br>
+									гарантии. Мы обменяем сгоревший товар на новый.<br>
+									Дом уж восстановите как-нибудь сами.
+								</p>
+						</div>
+						<div class="credit-container slide">
+							<h2>Кредит</h2>
+								<p>
+									Залезсть в долговую яму стало проще!<br>
+									Кредитные консультанты придут вам на помощь.
+								</p>
+							<a href="" class="button red-button credit-button">Отправить заявку</a>
+						</div>
 					</div>
 				</section>
 			</div>
@@ -457,17 +483,26 @@
 			
 			<!-- Модальные окна -->
 		<div class="modal-hidden">
-			<section>
-				<h2>Личный кабинет</h2>
-				<!-- Форма логина -->
-				<button type="button">Закрыть</button>
-			</section>
+			<div class="modal-writeus">
+				<form class="writeus">
+					<div class=" form-writeus">
+						<div class="writeus-input">
+							<label>Ваше имя:<input class="modal-name" type="text" placeholder="Имя Фамилия"></label>
+							<label>Ваш e-mail:<input class="modal-mail" type="text" placeholder="email@example.com"></label>
+						</div>
+						<label class="writeus-text">Текст письма:<textarea rows="4" placeholder="В свободной форме"></textarea></label>
+					</div>
+					<div class="writeus-button-background">
+						<button type="submit" class="button red-button writeus-button">Отправить</button>
+					</div>
+				</form>
+				<button class="close-button" type="button"></button>
+			</div>
 			
-			<section>
-				<h2>Как до нас добраться</h2>
+			<div class="modal-map">
 				<!-- Карта -->
-				<button type="button">Закрыть</button>
-			</section>
+				<button class="close-button" type="button"></button>
+			</div>
 		</div>
 	</body>
 </html>
