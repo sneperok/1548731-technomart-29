@@ -26,6 +26,7 @@
 	--active-red: #ba2732;
 	--header-hover-green: #5FBB2D;
 	--header-active-darkblue: #161D29;
+	--nav-darkblue: #1d2739;
 	--header-hover-blue: #3d546f;
 	--active-greylight: #c5c5c5;
 	--white-opacity: rgba(255,255,255,0.5);
@@ -94,8 +95,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	top: 5px;
-	right: -28px;
+	top: 7px;
+	right: -25px;
 	color: var(--basic-white);
 	width: 100px;
 	height: 30px;
@@ -117,14 +118,18 @@
 
 .header-logo {
 	position: relative;
+	width: 220px;
 	height: 47px;
 	background-color: var(--basic-red);
 	box-shadow: inset 0px -5px 0px var(--logoinset); 
 }
 
 .header-menu {
+/*
 	display: grid;
 	grid-template-columns: 0.7fr 1fr auto auto;
+*/
+	display: flex;
 	width: 940px;
 	height: 42px;
 	margin: 0 auto;
@@ -133,12 +138,13 @@
 .header-svg {
 	position: absolute;
 	top: 25%;
-	left: 22%;
+	left: 25%;
 }
 
 .header-output {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	margin: 0;
 	padding: 0;
 	height: inherit;
@@ -150,54 +156,70 @@
 .confirm-button {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	background-color: var(--basic-green);
 	color: var(--basic-white);
 	font-size: 18px;
 	line-height: 24px;
-	height: inherit;
-	border: none;
-	outline: none;
-	padding: 0px 20px 0px 20px;
+/*	padding: 0px 20px 0px 20px;*/
+	width: 150px;
+	height: 42px;
 }
 
-.search-form {
-	position: relative;
-	
+
+.search-form {	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
 }
+
 input[value="Поиск:"] {
-	padding-left: 40px;
-	width: 290px;
+	padding-left: 42px;
 }
 
 .header-search {
-	position: absolute;
 	background-color: inherit;
 	border: none;
 	color: var(--basic-white);
 	font-size: 18px;
 	line-height: 24px;
 	height: 42px;
+	width: 270px;
 }
 
-.search-icon {			/* Это будет кнопкой в форме */	
+.search-row {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 42px;
+	width: 270px;
+}
+
+.search-icon {
 	position: absolute;
-	top: 10px;
-	left: 10px;
+	top: 12px;
+	left: 17px;
 	fill-opacity: 0.3;
 	fill: var(--basic-white);
 	z-index: 100;
 }
 
 .header-cart {
-	padding: 9px 15px 9px 15px;
+/*	padding: 9px 15px 9px 15px;*/
+	width: 150px;
+	height: 42px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .header-bookmark {
-	margin-right: 20px;
-	padding: 9px 15px 9px 15px;
+/*	margin-right: 20px;*/
+/*	padding: 9px 15px 9px 15px;*/
+	width: 150px;
+	height: 42px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -205,7 +227,6 @@ input[value="Поиск:"] {
 
 .header-bookmark::before {
 	content: "";
-	display: inline-block;
 	width: 14px;
 	height: 16px;
 	background-image: url("../img/icon-bookmark.svg");
@@ -216,7 +237,6 @@ input[value="Поиск:"] {
 
 .header-cart::before {
 	content: "";
-	display: inline-block;
 	width: 15px;
 	height: 15px;	
 	background-image: url("../img/icon-cart.svg");
@@ -229,30 +249,36 @@ input[value="Поиск:"] {
 
 
 .header-info {
+/*
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+*/
+	display: flex;
+	justify-content: space-between;
 	width: 940px;
 	margin: 0 auto;
-	padding: 0 10px;
 	margin-bottom: 40px;
 }
 
 .header-general-info {
-	align-self: center;
-	padding-left: 25px;
+/*	align-self: center;*/
 	margin: 0;
+	padding-left: 29px;
+	font-weight: 400;
 	font-style: italic;
 	font-size: 16px;
 	line-height: 23px;
 	color: var(--basic-red);
+	width: 210px;
 }
 
 .header-contacts {
 	width: 270px;
+	margin-left: 12px;
 }
 
 .header-contacts .header-phone {
-	padding: 5px 25px 5px 25px;
+	padding: 5px 28px 5px 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -261,7 +287,6 @@ input[value="Поиск:"] {
 	line-height: 30px;
 	color: var(--basic-red);
 	border: 3px solid var(--basic-white);
-	box-sizing: border-box;
 }
 
 .header-phone::before {
@@ -280,6 +305,7 @@ input[value="Поиск:"] {
 	line-height: 24px;
 	padding: 0px;
 	margin: 0px;
+	margin-top: 2px;
 	text-align: center;
 }
 
@@ -287,7 +313,7 @@ input[value="Поиск:"] {
 .header-info .registration-link {
 	color: var(--basic-black);
 	background-color: var(--basic-white);
-	padding: 12px 26px 12px 26px;
+/*	padding: 12px 26px 12px 26px;*/
 }
 
 .useable-cart {
@@ -295,6 +321,7 @@ input[value="Поиск:"] {
 }
 
 .enter-registration-menu {
+	width: 280px;
 	font-size: 21px;
 	line-height: 21px;
 	display: flex;
@@ -304,15 +331,23 @@ input[value="Поиск:"] {
 
 .registration-link {
 	margin-left: 10px;
+	width: 150px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .enter-link {
+	width: 120px;
+	height: 45px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .enter-icon {
+	margin-left: -5px;
 	margin-right: 5px;
 }
 
@@ -404,9 +439,11 @@ input[value="Поиск:"] {
 
 .site-navigation {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
-	padding: 15px 25px 15px 25px;
+/*	padding: 15px 25px 15px 25px;*/
+	height: 60px;
+	padding: 0;
 	margin: 0;
 	list-style: none;
 	font-size: 18px;
@@ -414,7 +451,7 @@ input[value="Поиск:"] {
 }
 
 .site-navigation a {
-	padding: 15px 25px 15px 25px;
+	padding: 20px 28px 15px 28px;
 }
 
 /* ============================ HEADER HOVER/LINK/FOCUS =================== */
@@ -501,7 +538,7 @@ input[value="Поиск:"] {
 
 .site-navigation a:active,
 .site-navigation a:focus{
-	background-color: var(--header-active-darkblue);
+	background-color: var(--nav-darkblue);
 	color: var(--white-opacity);
 }
 
@@ -573,6 +610,10 @@ input[value="Поиск:"] {
 	background-repeat: no-repeat;
 }
 
+.back span {
+	visibility: hidden;
+}
+
 .forward {
 	position: absolute;
 	top: 122px;
@@ -588,18 +629,28 @@ input[value="Поиск:"] {
 	transform: rotate(180deg);
 }
 
+.forward span {
+	display: inline-block;
+	transform: rotate(180deg);
+	visibility: hidden;
+}
+
 .catalog-button { 
-	padding: 10px 48px 10px 48px;
+	padding: 10px 46px 10px 46px;
 	margin-top: 110px;
 }
 
 .checked-slide {
 	position: absolute;
 	bottom: 37px;
-	left: 50%;
+	left: 48%;
 	display: flex;
 	justify-content: space-between;
 	width: 30px;
+}
+
+.checked-slide span {
+	visibility: hidden;
 }
 
 .checked-slide button {
@@ -613,7 +664,6 @@ input[value="Поиск:"] {
 	background-color: var(--basic-white);
 	border-radius: 50%
 }
-
 
 .checked-slide .current::before {
 	content: "";
@@ -765,13 +815,14 @@ input[value="Поиск:"] {
 	margin-left: 30px;
 	font-size: 30px;
 	line-height: 30px;
+	font-weight: 400;
 	text-transform: uppercase;
 	color: var(--basic-lightblue);
 	flex-grow: 2;
 }
 
 .popular-button {
-	padding: 10px 20px 10px 20px;
+	padding: 11px 24px 9px 24px;
 	margin-right: 15px;
 }
 
@@ -810,29 +861,35 @@ input[value="Поиск:"] {
 	align-items: center;
 }
 
-
-.price-button p {
-	margin: 0;
-	background-color: var(--basic-red);
-	position: relative; 
+.price-button a {
+	position: relative;
 	width: 120px;
-	height: 40px;
+	height: 38px;
+	padding: 0;
+	margin: 0;
+	margin-left: -5px;
+	background-color: var(--basic-red);
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	margin-bottom: 18px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
-	margin-bottom: 20px;
+	
 }
 
-.price-button p:after{
-	border: 20px solid transparent;	
+.price-button a:after {
+/*
+	border: 19px solid transparent;	
 	border-left: 20px solid var(--basic-red);
+*/
+	border-top: 19px solid transparent;
+	border-left: 19px solid var(--basic-red);
+	border-bottom: 19px solid transparent;
     content: "";
     position: absolute;
-    right: -40px;
-    top: 0px;
-   
+    right: -19px;
+    top: 0px; 
 }
 
 .product-item h3 {
@@ -840,6 +897,24 @@ input[value="Поиск:"] {
 	font-size: 18px;
 	line-height: 20px;
 	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+.product-item:first-child img {
+	margin-bottom: 10px;
+}
+ 
+.product-item:nth-child(2) img {
+	margin-bottom: 40px;
+}
+
+.product-item:nth-child(3) img {
+	margin-bottom: 30px;
+}
+
+.product-item:last-child img {
+	margin-bottom: 40px;
 }
 
 .product-item span {
@@ -848,7 +923,8 @@ input[value="Поиск:"] {
 	text-decoration-line: line-through;
 	text-transform: uppercase;
 	color: var(--darkgray);
-	margin-bottom: 15px;
+	margin-top: 6px;
+	margin-bottom: 13px;
 }
 
 .hidden-item {
@@ -958,6 +1034,7 @@ input[value="Поиск:"] {
 }
 
 .popular-manufacturer {
+	margin-bottom: 20px;
 	height: 90px;
 	display: flex;
 	justify-content: space-between;
@@ -967,6 +1044,7 @@ input[value="Поиск:"] {
 }
 
 .popular-manufacturer h2 {
+	font-weight: 400;
 	margin: 0;
 	margin-left: 30px;
 	font-size: 30px;
@@ -976,13 +1054,14 @@ input[value="Поиск:"] {
 }
 
 .manufacturer-button {
-	margin-right: 15px;
-	padding: 10px 35px 10px 35px;
+	margin-right: 18px;
+	padding: 10px 40px 10px 40px;
 }
 
 .manufacturer-list {
+	margin: 0;
 	padding: 0;
-	width: 940px;	/* ================ Сделал временный флекс для удобства отображения */
+	width: 940px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, 1fr);
@@ -1015,7 +1094,7 @@ input[value="Поиск:"] {
 
 .background-service-delivery {
 	background-color: var(--opacitygray);
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 	
 }
 
@@ -1048,13 +1127,14 @@ input[value="Поиск:"] {
 }
 
 .service-container {
-	margin-bottom: 65px;
+	margin-bottom: 70px;
 }
 
 .service-container h2 {
 	margin-top: 0;
 	font-size: 30px;
 	line-height: 30px;
+	font-weight: 400;
 	text-transform: uppercase;
 	color: var(--basic-black);
 }
@@ -1075,7 +1155,7 @@ input[value="Поиск:"] {
 .delivery-container.current-slide::before {
 	position: absolute;
 	content: "";
-	bottom: 5px;
+	bottom: 23px;
 	right: 0px;
 	width: 468px;
 	height: 261px;
@@ -1109,6 +1189,9 @@ input[value="Поиск:"] {
 .delivery-container h2,
 .garant-container h2,
 .credit-container h2 {
+	margin: 0;
+	margin-bottom: 30px;
+	font-weight: 400;
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
@@ -1158,11 +1241,12 @@ input[value="Поиск:"] {
 	box-shadow: 
 		inset 0px 1px 0px var(--blueinset),
 		0px -1px 0px var(--basic-darkblue);
+	padding-bottom: 5px;
 }
 
 .service-delivery-item a {
 	display: inline-block;
-	padding: 15px 141px 15px 25px;
+	padding: 15px 142px 15px 25px;
 	font-size: 21px;
 	line-height: 30px;
 	color: var(--basic-white);
@@ -1208,6 +1292,7 @@ input[value="Поиск:"] {
 
 .info-company h2,
 .info-contacts h2 {
+	font-weight: 400;
 	margin-top: 0;
 	font-size: 30px;
 	line-height: 30px;
@@ -1233,14 +1318,18 @@ input[value="Поиск:"] {
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 24px;
-	margin-top: 0;
+	margin: 0;
+}
+
+.info-company p:first-of-type {
+	margin-bottom: 28px;
 }
 
 .info-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 
 .info-item {
@@ -1267,8 +1356,15 @@ input[value="Поиск:"] {
 }
 
 .map-button {
+/*
 	display: inline-block;
 	padding: 10px 60px 10px 60px;
+*/
+	width: 300px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* ============================ FOOTER TOP ================================= */
@@ -1283,7 +1379,7 @@ input[value="Поиск:"] {
 	display: grid;
 	grid-template-columns: max-content 1fr;
 	grid-template-rows: min-content min-content;
-	grid-row-gap: 20px;
+	grid-row-gap: 24px;
 	grid-column-gap: 50px;
 }
 
@@ -1294,7 +1390,7 @@ input[value="Поиск:"] {
 .footer-top {
 	background-color: var(--basic-lightblue);
 /*	padding-bottom: 65px;*/
-	height: 195px;
+	height: 196px;
 }
 
 .footer-logo {
@@ -1307,8 +1403,8 @@ input[value="Поиск:"] {
 
 .footer-svg {
 	position: absolute;
-	top: 28%;
-	left: 18%;
+	top: 29%;
+	left: 19%;
 }
 
 .footer-adress {
@@ -1424,7 +1520,7 @@ input[value="Поиск:"] {
 .footer-bottom-container {
 	width: 940px;
 	margin: 0 auto;
-	height: 105px;
+	height: 107px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -1438,20 +1534,31 @@ input[value="Поиск:"] {
 	color: var(--lightgold);
 }
 
-.social-icon h2 {
-	display: none;
-}
-
 .social-icon-list {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: flex;
+	margin-left: 42px;
+	margin-top: 8px;
+}
+
+.social-icon-item {
 }
 
 .comeback p,
 .develop p {
 	margin: 0;
+}
+
+.comeback-develop {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.develop {
+	margin-left: 50px;
+	margin-right: 15px;
 }
 
 .footer-link:hover {
