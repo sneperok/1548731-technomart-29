@@ -48,6 +48,7 @@
 	--controls-shadow: #cfcfcf;
 	--controls-darkgray: #ababab;
 	--modal-cart: #f1f1f1;
+	--filter-darkgray: #b5b5b5;
 }
 
 .page {
@@ -61,6 +62,12 @@
   	align-content: start;
 	/* font-family: "Cuprum", "Arial", sans-serif; */
 	/* font-family: "PT Sans", "Arial", sans-serif; */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -462,6 +469,7 @@ input[value="Поиск:"] {
 
 .site-navigation {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 /*	padding: 15px 25px 15px 25px;*/
@@ -1792,7 +1800,7 @@ input[value="Поиск:"] {
 }
 
 .price-controls input {
-    padding: 10px 0px 10px 15px;
+    padding: 10px 10px 10px 10px;
     text-align: center;
     width: 80px;
     border: none;
@@ -1828,7 +1836,31 @@ input[value="Поиск:"] {
     user-select: none;
 }
 
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label {
+	opacity: 0.4;
+}
+
 .filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: -1px;
+    width: 23px;
+    height: 23px;
+	background-image: url("../img/check-disabled.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter-option:hover .filter-input-checkbox + label::before,
+.filter-option:focus .filter-input-checkbox + label::before {
+	background-image: url("../img/checkbox-disabled-dark.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::before {
     content: "";
     position: absolute;
     left: -35px;
@@ -1839,6 +1871,14 @@ input[value="Поиск:"] {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
+.filter-option:hover .filter-input-checkbox:checked + label::before,
+.filter-option:focus .filter-input-checkbox:checked + label::before {
+	background-image: url("../img/checkbox-dark.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 
 .filter-input-checkbox:checked + label::after {
     content: "";
@@ -1853,26 +1893,56 @@ input[value="Поиск:"] {
 	z-index: 100;
 }
 
+.filter-option:hover .filter-input-checkbox:checked + label::after,
+.filter-option:focus .filter-input-checkbox:checked + label::after {
+	background-image: url("../img/checkbox-ok-dark.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+/*
+.filter-input-checkbox:disabled + label::before {
+    content: "";
+    position: absolute;
+	left: -35px;
+    top: -1px;
+    width: 23px;
+    height: 23px;
+	background-image: url("../img/check-disabled.svg");
+	z-index: 100;
+}
+*/
+
 .filter-input-radio + label::before {
-  content: "";
-  position: absolute;
-  left: -35px;
-  top: -4px;
-  width: 16px;
-  height: 16px;
-  border: 4px solid var(--active-greylight);
-  border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: -4px;
+    width: 16px;
+    height: 16px;
+    border: 4px solid var(--active-greylight);
+    border-radius: 50%;
+}
+
+.filter-option:hover .filter-input-radio + label::before, 
+.filter-option:focus .filter-input-radio + label::before {
+	border: 4px solid var(--filter-darkgray);
 }
 
 .filter-input-radio:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: -27px;
-  width: 8px;
-  height: 8px;
-  background-color: var(--active-greylight);
-  border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -27px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--active-greylight);
+    border-radius: 50%;
+}
+
+.filter-option:hover .filter-input-radio:checked + label::after,
+.filter-option:focus .filter-input-radio:checked + label::after{
+	background-color: var(--filter-darkgray);
 }
 
 .filter-button {
@@ -1942,6 +2012,10 @@ input[value="Поиск:"] {
 	margin-right: 15px;
 }
 
+.active-up-down {
+	fill: var(--basic-red);
+}
+
 .up-svg {
 	margin-right: 20px;
 }
@@ -1984,8 +2058,13 @@ input[value="Поиск:"] {
 	border-bottom: 1px solid var(--basic-red);
 }
 
-.sorting-item a:active,
-.sorting-item a:focus {
+.sorting-item:active a,
+.sorting-item:focus a {
+	color: var(--basic-red);
+	border: none;
+}
+
+.active-sort a {
 	color: var(--basic-red);
 	border: none;
 }

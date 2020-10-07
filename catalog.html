@@ -141,7 +141,7 @@
 				
 			<section class="catalog-filter">
 				<h2>Фильтр:</h2>
-				<form>
+				<form class="filter" method="get" action="https://echo.htmlacademy.ru">
 					<fieldset class="filter-item">
 						<legend>Цена:</legend>
 						<div class="range-filter">
@@ -168,7 +168,7 @@
 						<legend>Производители:</legend>
 						<ul>
 						  <li class="filter-option filter-checkbox">
-							<input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Bosch" id="Bosch" checked>
+							<input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Bosch" id="Bosch" tabindex="0" checked>
 							<label for="Bosch">Bosch</label>
 						  </li>
 						  <li class="filter-option filter-checkbox">
@@ -185,7 +185,7 @@
 						  </li>
 					      <li class="filter-option filter-checkbox">
 							<input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Hitachi" id="Hitachi">
-							<label for="Hitachi">Hitachi</label>
+							  <label for="Hitachi">Hitachi</label>
 						  </li>
 						</ul>
 					</fieldset>
@@ -213,8 +213,8 @@
 			<section class="sorting">
 				<h2>Сортировка:</h2>
 				<ul class="sorting-list">
-					<li class="sorting-item">
-						<a class="price" href="">По цене</a> 		<!-- Выбрано по цене -->
+					<li class="sorting-item active-sort">
+						<a class="price" href="">По цене</a> 
 					</li>
 					<li class="sorting-item">
 						<a class=" type" href="">По типу</a>
