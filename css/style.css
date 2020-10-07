@@ -1853,8 +1853,8 @@ input[type="radio"]:disabled + label {
     background-position: 0 0;
 }
 
-.filter-option:hover .filter-input-checkbox + label::before,
-.filter-option:focus .filter-input-checkbox + label::before {
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before {
 	background-image: url("../img/checkbox-disabled-dark.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1872,8 +1872,8 @@ input[type="radio"]:disabled + label {
     background-position: 0 0;
 }
 
-.filter-option:hover .filter-input-checkbox:checked + label::before,
-.filter-option:focus .filter-input-checkbox:checked + label::before {
+.filter-input-checkbox:checked:hover + label::before,
+.filter-input-checkbox:checked:focus + label::before {
 	background-image: url("../img/checkbox-dark.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1893,8 +1893,8 @@ input[type="radio"]:disabled + label {
 	z-index: 100;
 }
 
-.filter-option:hover .filter-input-checkbox:checked + label::after,
-.filter-option:focus .filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked:hover + label::after,
+.filter-input-checkbox:checked:focus + label::after {
 	background-image: url("../img/checkbox-ok-dark.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1924,8 +1924,8 @@ input[type="radio"]:disabled + label {
     border-radius: 50%;
 }
 
-.filter-option:hover .filter-input-radio + label::before, 
-.filter-option:focus .filter-input-radio + label::before {
+.filter-input-radio:hover + label::before, 
+.filter-input-radio:focus + label::before {
 	border: 4px solid var(--filter-darkgray);
 }
 
@@ -1940,8 +1940,8 @@ input[type="radio"]:disabled + label {
     border-radius: 50%;
 }
 
-.filter-option:hover .filter-input-radio:checked + label::after,
-.filter-option:focus .filter-input-radio:checked + label::after{
+.filter-input-radio:checked:hover + label::after,
+.filter-input-radio:checked:focus + label::after{
 	background-color: var(--filter-darkgray);
 }
 
@@ -2012,10 +2012,6 @@ input[type="radio"]:disabled + label {
 	margin-right: 15px;
 }
 
-.active-up-down {
-	fill: var(--basic-red);
-}
-
 .up-svg {
 	margin-right: 20px;
 }
@@ -2023,6 +2019,10 @@ input[type="radio"]:disabled + label {
 .up-svg,
 .down-svg {
 	fill: var(--active-greylight);
+}
+
+.active-up-down {
+	fill: var(--basic-red);
 }
 
 /*
