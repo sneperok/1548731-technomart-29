@@ -888,6 +888,14 @@ input[value="Поиск:"] {
 	align-items: center;
 }
 
+.product-item-img {
+	height: 164px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
 .price-button a {
 	position: relative;
 /*
@@ -949,6 +957,7 @@ input[value="Поиск:"] {
 */
 
 .product-item span {
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 17px;
 	line-height: 18px;
 	text-decoration-line: line-through;
