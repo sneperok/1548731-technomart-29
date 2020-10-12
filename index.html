@@ -485,17 +485,17 @@
 			<!-- Модальные окна -->
 			<section class="modal modal-writeus">
 				<h2 class="visually-hidden">Написать нам</h2>
-				<form class="writeus" method="get" action="https://echo.htmlacademy.ru">
+				<form class="writeus" method="post" action="https://echo.htmlacademy.ru" target="_blank">
 					<div class=" form-writeus">
 						<div class="writeus-input">
 							<label>Ваше имя:
-								<input class="modal-name" type="text" placeholder="Имя Фамилия">
+								<input class="modal-name" type="text" name="fullname" placeholder="Имя Фамилия">
 							</label>
 							<label>Ваш e-mail:
-								<input class="modal-mail" type="text" placeholder="email@example.com">
+								<input class="modal-mail" type="email" name="email" placeholder="email@example.com">
 							</label>
 						</div>
-						<label class="writeus-text">Текст письма:<textarea rows="4" placeholder="В свободной форме"></textarea></label>
+						<label class="writeus-text">Текст письма:<textarea name="text" rows="4" placeholder="В свободной форме"></textarea></label>
 					</div>
 					<div class="writeus-button-background">
 						<button type="submit" class="button red-button writeus-button">Отправить</button>

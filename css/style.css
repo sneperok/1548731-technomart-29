@@ -2180,6 +2180,7 @@ input[type="radio"]:disabled + label {
 
 .modal-writeus {
 	background-color: var(--basic-white);
+	display: block;
 	top: 120px;
 	bottom: auto;
 	width: 620px;
