@@ -591,22 +591,27 @@ input[value="Поиск:"] {
 
 .promo-container {
 	font-family: "Cuprum", "Arial", sans-serif;
-	display: grid;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 123px);
 	margin-bottom: 60px;
+}
+
+.promo-list {
+	display: grid;
+	grid-row-gap: 20px;
+	grid-column-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, minmax(123px, auto));
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
 
 .promo-slider {
 	position: relative;
 	width: 620px;
 	height: 266px;
-	grid-column-start: 1;
-	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 4;
+	grid-row: span 2;
+	grid-column: span 2;
+
 }
 
 .perforators-page {
@@ -703,24 +708,15 @@ input[value="Поиск:"] {
 	background-color: var(--basic-red);
 }
 
-
-.promo-list {
-	display: grid;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	z-index: 1;
-}
-
 .promo-item {
 	width: 300px;	
 	min-height: 123px;
+	overflow: hidden;
 }
 
 .promo-item-content {
-	width: 200px;
+	width: 180px;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -750,7 +746,6 @@ input[value="Поиск:"] {
 	background-repeat: no-repeat;
 	background-position: 85%;
 	position: relative;
-	overflow: hidden;
 }
 
 .tools {
@@ -772,8 +767,6 @@ input[value="Поиск:"] {
 	background-image: url("../img/sales-icon.svg");
 	background-repeat: no-repeat;
 	background-position: 80%;
-	grid-column-start: 3;
-	grid-column-end: 4;
 }
 
 .delivery {
@@ -781,8 +774,6 @@ input[value="Поиск:"] {
 	background-image: url("../img/delivery-icon.svg");
 	background-repeat: no-repeat;
 	background-position: 85%;
-	grid-column-start: 3;
-	grid-column-end: 4;
 }
 
 .promo-item h3 {
