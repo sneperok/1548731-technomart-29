@@ -11,18 +11,6 @@ const writeMail = document.querySelector("[name=email]");
 const review = document.querySelector("[name=appeal]");
 
 
-//const isStorageSupport = true;
-//let storageName = "";
-//let storageMail = "";
-//
-//try {
-//	storageName = localStorage.getItem("fullName");
-//	storageMail = localStorage.getItem("writeMail");
-//} catch (err) {
-//	isStorageSupport = false;
-//}
-
-
 writeButton.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	writePopup.classList.add("modal-show");
@@ -34,13 +22,6 @@ mapButton.addEventListener("click", function (evt) {
 	mapPopup.classList.add("modal-show");
 });
 
-//[].forEach.call(close, function (el) {
-//	el.onclick = function (evt) {
-//		writePopup.classList.remove("modal-show");
-//		mapPopup.classList.remove("modal-show");
-//		writePopup.classList.remove("modal-error");
-//	}
-//});
 
 close.forEach(close => close.addEventListener('click', function(evt) {
     writePopup.classList.remove("modal-show");
@@ -53,12 +34,6 @@ writeForm.addEventListener("submit", function (evt) {
 	if (!fullName.value || !writeMail.value) {
 		evt.preventDefault();
 		writePopup.classList.add("modal-error");
-	}
-//	} else {
-//		if (isStorageSupport) {
-//			localStorage.setItem("fullName", fullName.value);
-//			localStorage.setItem("writeMail", writeMail.value);
-//		}
-//	} 	
+	}	
 });
 
