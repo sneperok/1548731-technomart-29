@@ -357,7 +357,8 @@ input[type="radio"].visually-hidden {
 .header-phone::before {
 	margin-right: 15px;
 	content: "";
-	display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 	width: 19px;
 	height: 20px;
 	background-image: url("../img/icon-phone.svg");
@@ -472,7 +473,8 @@ input[type="radio"].visually-hidden {
 }
 
 .login-item {
-	display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 	font-size: 16px;
 	line-height: 18px;
 }
@@ -787,7 +789,8 @@ input[type="radio"].visually-hidden {
 }
 
 .forward span {
-	display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 	-webkit-transform: rotate(180deg);
 	    -ms-transform: rotate(180deg);
 	        transform: rotate(180deg);
@@ -1144,7 +1147,8 @@ input[type="radio"].visually-hidden {
 
 .buy::before {
 	content: "";
-	display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 	width: 15px;
 	height: 15px;
 	background-image: url("../img/icon-cart.svg");
@@ -1328,7 +1332,8 @@ input[type="radio"].visually-hidden {
 	font-size: 14px;
 	line-height: 18px;
 	border-radius: 3px;
-	display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 	padding: 10px 45px 10px 45px;
 	text-transform: uppercase;
 	margin-top: 30px;
@@ -1372,7 +1377,7 @@ input[type="radio"].visually-hidden {
 	right: 0px;
 	width: 468px;
 	height: 261px;
-	background-image: url("../img/Delivery-track.png");
+	background-image: url("../img/delivery-track.png");
 	background-repeat: no-repeat;
 	z-index: -1;
 }
@@ -1445,7 +1450,7 @@ input[type="radio"].visually-hidden {
 	top: -45px;
 	width: 10px;
 	height: 279px;
-	background-image: url("../img/Object.png");
+	background-image: url("../img/object.png");
 	background-repeat: no-repeat;
 	z-index: 100;
 	opacity: 0.4;
@@ -1466,7 +1471,8 @@ input[type="radio"].visually-hidden {
 }
 
 .service-delivery-item a {
-	display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 	padding: 15px 142px 15px 25px;
 	font-size: 21px;
 	line-height: 30px;
@@ -1594,12 +1600,14 @@ input[type="radio"].visually-hidden {
 }
 
 .info-button {
-	display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 	padding: 10px 40px 10px 40px;
 }
 
 .map-button {
-	display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 	padding: 10px 62px 10px 61px;
 }
 
@@ -2372,7 +2380,8 @@ input[type="radio"].visually-hidden {
 	font-size: 13px;
 	line-height: 18px;
 	text-decoration: none;
-	display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 	padding: 10px 15px 10px 15px;
 }
 
