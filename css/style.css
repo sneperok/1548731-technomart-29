@@ -583,8 +583,8 @@ input[type="radio"].visually-hidden {
 .search-form:focus .search-icon,
 .search-form:active .search-icon {
 	fill: var(--basic-red);
-	fill-opacity: 1;
-	z-index: 100;
+  fill-opacity: 1;
+  z-index: 100;
 }
 
 .header-search:focus,
