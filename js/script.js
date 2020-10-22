@@ -27,7 +27,7 @@ close.forEach(close => close.addEventListener('click', function(evt) {
     writePopup.classList.remove("modal-show");
 	mapPopup.classList.remove("modal-show");
 	writePopup.classList.remove("modal-error");
-  }))
+  }));
 
 
 writeForm.addEventListener("submit", function (evt) {
